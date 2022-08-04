@@ -1,0 +1,18 @@
+doctype html
+html(lang="en")
+    head
+        title Data Campus Project
+        link(href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet')
+        block style
+
+    body
+        include header.pug
+        main
+            if message
+                div.message_handle
+                    h1.message_handle_text ❌ #{message}
+            // if userAuthFail
+                div.message_handle
+                    h2 You have approached to page that require authentication.
+                    h2 Please log in.
+            block content
